@@ -6,10 +6,9 @@
     <title>Registration Page</title>
     <style>
         body {
-          
             font-family: Arial, sans-serif;
             background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
             margin: 0;
             padding: 0;
             display: flex;
@@ -68,7 +67,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
 <body>
     <div class="registration-container">
         <h2>Register</h2>
-        <form action="https://formspree.io/f/mnqywzrp" method="POST">
+        <form id="registrationForm">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -78,11 +77,25 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <label for="name">Mobile Number</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Mobile number" required>
             </div>
             <button type="submit" class="submit-btn">Register</button>
         </form>
     </div>
+
+    <script>
+        // Add event listener to the form
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Show a popup
+            alert('Registration Done!');
+
+            // Optionally, reset the form after submission
+            this.reset();
+        });
+    </script>
 </body>
 </html>
