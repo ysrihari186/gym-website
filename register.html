@@ -30,7 +30,7 @@
                 uname: document.querySelector("#uname").value,
                 phone: document.querySelector("#phone").value
             }
-            if(data.email.trim() =! "" && data.phone.trim() != "" && data.uname.trim() != "") {
+            if(data.email.trim() == "" || data.phone.trim() == "" || data.uname.trim() == "") {
                 alert("Enter valid data")
                 return;
             }
@@ -39,8 +39,6 @@
             window.location.href = "index.html"
                 
         }
-}
-
     </script>
 </body>
 </html>
