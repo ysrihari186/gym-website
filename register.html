@@ -30,11 +30,11 @@
                 uname: document.querySelector("#uname").value,
                 phone: document.querySelector("#phone").value
             }
-            fetch("https://gym-backend-plum.vercel.app/register", {
-                method: "POST",
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-            }).then(x=>x.json()).then(y=>alert(y.msg.toString()));
+            if(data.email.trim() =! "" && data.phone.trim() != "" && data.uname.trim() != "")
+                alert("Enter valid data")
+            else 
+                alert("Data submitted successfully)
+                
         }
 }
 
