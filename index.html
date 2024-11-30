@@ -74,8 +74,7 @@
           </ul>
     
           <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
+            <button type="button" class="btn btn-primary">Register</button>
           </div>
         </header>
       </div>
@@ -90,13 +89,18 @@
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Join the Community</h1>
             <p class="lead">"Be a part of our vibrant fitness community. Together, we inspire, motivate, and achieve our best selves, one workout at a time."</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Sign-up</button>
-              <button type="button" class="btn btn-secondary btn-lg px-4">Login</button>
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onClick="onFF()">Register</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+	<script>
+		const onFF = () => {
+			window.location.href = "register.html"
+		}
+	</script>
 
     
       <div class="container px-4 py-5" id="custom-cards">
