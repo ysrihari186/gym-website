@@ -21,7 +21,7 @@
             <label for="phone">Phone</label>
             <input class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Enter name">
         </div>
-        <button onclick="formSubmit()" class="btn btn-primary">Submit</button>
+        <button onClick="formSubmit()" class="btn btn-primary">Submit</button>
     </div>
     <script>
         const formSubmit = () => {
@@ -30,10 +30,13 @@
                 uname: document.querySelector("#uname").value,
                 phone: document.querySelector("#phone").value
             }
-            if(data.email.trim() =! "" && data.phone.trim() != "" && data.uname.trim() != "")
+            if(data.email.trim() =! "" && data.phone.trim() != "" && data.uname.trim() != "") {
                 alert("Enter valid data")
+                return;
+            }
             else 
-                alert("Data submitted successfully)
+                alert("Data submitted successfully")
+            window.location.href = "index.html"
                 
         }
 }
